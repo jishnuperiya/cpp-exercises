@@ -4,7 +4,7 @@ https://en.cppreference.com/w/cpp/language/types
 
 ### why there are many types of integers data types?
 
-c++ is for performance
+c++ is for performance.
 suppose there is a variable age, which takes age of humans.
 max_limit = 200
 how much bit we need = 8 bit or 4 byte.
