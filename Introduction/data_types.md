@@ -36,3 +36,8 @@ signed integer type with width of exactly 8, 16, 32 and 64 bits respectively
 with no padding bits.
 
 Also the unsigned version of above mentioned.
+
+##char
+
+ascii table
+utf-8 table - new and better (have umlauts for example)
