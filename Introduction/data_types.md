@@ -4,7 +4,7 @@ https://en.cppreference.com/w/cpp/language/types
 
 ### why there are many types of integers data types?
 
-c++ is for performance
+c++ is for performance.
 suppose there is a variable age, which takes age of humans.
 max_limit = 200
 how much bit we need = 8 bit or 4 byte.
@@ -36,10 +36,3 @@ signed integer type with width of exactly 8, 16, 32 and 64 bits respectively
 with no padding bits.
 
 Also the unsigned version of above mentioned.
-
-## char
-
-https://www.rapidtables.com/code/text/ascii-table.html
-
-now there is another standard for text: **UTF8**
-alot better and have many characters (for example umlauts)
