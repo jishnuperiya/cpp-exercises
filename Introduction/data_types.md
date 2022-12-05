@@ -36,3 +36,10 @@ signed integer type with width of exactly 8, 16, 32 and 64 bits respectively
 with no padding bits.
 
 Also the unsigned version of above mentioned.
+
+## char
+
+https://www.rapidtables.com/code/text/ascii-table.html
+
+now there is another standard for text: **UTF8**
+alot better and have many characters (for example umlauts)
