@@ -37,7 +37,7 @@ with no padding bits.
 
 Also the unsigned version of above mentioned.
 
-##char
+## char
 
 ascii table
 utf-8 table - new and better (have umlauts for example)
