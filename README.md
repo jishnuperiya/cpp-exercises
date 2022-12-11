@@ -1,3 +1,3 @@
-# Chapters
-
-1) DataTypes : ./DataTypes
+## Chapters
+1) DataTypes
+2) Miscallaneous
