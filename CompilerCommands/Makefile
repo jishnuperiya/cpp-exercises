@@ -1,5 +1,5 @@
 DEBUG_FLAGS = -O0 -g3 # O0 = no compile optimization, -g3 = max degug info
-RELEASE_FLAGS = -O3 # max compile optimizaiton (level3)
+RELEASE_FLAGS = -O3 # max compile optimizaiton (level3), since no debug info is provided, it will be hard to debug the relase exe. 
 
 FLAGS = $(RELEASE_FLAGS) 
 
