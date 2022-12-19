@@ -7,7 +7,9 @@ the correct use is to use a static keyword - allocating 4 bytes of memeory for t
 in the static memeory area.
 
 And if you have this static variable in a source code (not header file), this variable is visible
-only in the scope of this file. can not be used outside of this file.
+only in the scope of this file. can not be used outside of this file. 
+Means the varible can only be used in the compilation unit
+wher it has been defined.
 
 you can also have a static variable inside a function. which is given below as an example.
 */
