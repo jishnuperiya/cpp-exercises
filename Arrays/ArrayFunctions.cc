@@ -4,8 +4,7 @@ void print_array(const std::int32_t arr[], const std::size_t len){
 
     /* this is a problem with C style array. we have to give length as a parameter to 
     the function.
-    sizeof dont work in arrays. if you do sizeof(arr)--> it gives 8 bytes. becuase system is 64 bits,
-    which is 8 bytes.
+    sizeof dont work in arrays. if you do sizeof(arr)--> it gives 8 bytes (which is the size of a memory address in a 64 bit system. 64bit = 8bytes)
     sizeof(arr), gives the size of the pointer. So sizeof DOESNT WORK
     */
 
