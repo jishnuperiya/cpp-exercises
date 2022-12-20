@@ -3,4 +3,5 @@
 1) DataTypes
 2) Compiler commands
 3) Miscallaneous
-4) Pointer
+4) arrays
+5) Pointer
