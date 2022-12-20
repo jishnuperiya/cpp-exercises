@@ -13,3 +13,5 @@ pointerquiz
 nullptr
 
 pointer array
+
+array pointer decay
