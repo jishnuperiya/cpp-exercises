@@ -15,3 +15,5 @@ nullptr
 pointer array
 
 array pointer decay
+
+array index operator
