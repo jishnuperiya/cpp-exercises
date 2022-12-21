@@ -11,7 +11,7 @@
       "cwd": "d:/GITREPO/Cpp-Exercises/Reference,LValue,RValue",
       "program": "d:/GITREPO/Cpp-Exercises/Reference,LValue,RValue/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "gdb.exe",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
