@@ -13,7 +13,8 @@ enum PermissionLevel{
 
 enum ServerGroup
 {
-    INSTRUCTOR = 1,  // will not work! becuase the ADMIN variable in the enum PermissionLevel is global (in c style enums). which is stupid! --> solution enum class in c++.
+    INSTRUCTOR = 1,  // will not work! becuase the ADMIN variable in the enum PermissionLevel
+    //is global (in c style enums). which is stupid! --> solution enum class in c++.
     ADMIN = 1,
 };
 
@@ -70,7 +71,7 @@ int main()
     UserData jan;
     jan.id = 100052;
     jan.name = "Jan schraffaneck";
-    jan.permission_level = INSTRUCTOR;
+    jan.permission_level = PermissionLevel::INSTRUCTOR;
     printUserData(jan);
 
     return 0;
