@@ -3,23 +3,22 @@
 
 #include "Game.h"
 
-
-namespace{  //namespace without name: meaning these variable can only be accessed by this compilation unit. main script cant access it ( in contrary to when we put these variables in header data)
-
+namespace
+{
 constexpr static std::uint32_t LEN_X = 10U;
 constexpr static std::uint32_t START = 0U;
 constexpr static std::uint32_t GOAL = 9U;
 constexpr static char LEFT = 'a';
 constexpr static char RIGHT = 'd';
-};
+}; // namespace
 
-bool is_finished(const std::uint32_t player){
+bool is_finished(const std::uint32_t player)
+{
     return player == GOAL;
 }
 
-
-void print_game_state(const std::uint32_t player){
-
+void print_game_state(const std::uint32_t player)
+{
     for (std::uint32_t i = START; i < LEN_X; i++)
     {
         if (i == player)
@@ -35,11 +34,10 @@ void print_game_state(const std::uint32_t player){
             std::cout << '.';
         }
     }
-
 }
 
-void execute_move(std::uint32_t &player,const char move){
-
+void execute_move(std::uint32_t &player, const char move)
+{
     if (LEFT == move && player > 0)
     {
         player--;
@@ -53,7 +51,6 @@ void execute_move(std::uint32_t &player,const char move){
         std::cout << "Unrecognized move!\n";
     }
 }
-
 
 void game()
 {
@@ -69,7 +66,6 @@ void game()
 
         print_game_state(player);
         std::cin >> move;
-        execute_move(player,move);
-
+        execute_move(player, move);
     }
 }
