@@ -1,22 +1,27 @@
-#include <iostream>
+/*
+in this example we will create a basis class
+and subclass for player and npc. this basis class will serve both player class and npc class
 
+*/
+
+#include <iostream>
 #include "Agent.h"
 
 int main()
 {
-    std::cout << "Line 7\n";
+
     {
-        auto agent1 = Agent{"A1", 0U};
+        Agent agent1("A1",2U);
+
     }
-    std::cout << "Line 11\n";
     {
-        auto player1 = Player{"P1", 1U};
+        Player player1("A2",2);
     }
-    std::cout << "Line 15\n";
     {
-        auto npc1 = NPC{"N1", 2U};
+        auto npc1 = NPC{"A3",2}; // different way to initialize object
     }
-    std::cout << "Line 19\n";
+
+
 
     return 0;
 }
