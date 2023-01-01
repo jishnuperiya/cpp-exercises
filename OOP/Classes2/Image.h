@@ -1,22 +1,23 @@
 #include <cstdint>
+#include <vector>
 
-class Image // name start with capital letter
+using GrayscaleMatrix = std::vector<std::vector<std::uint8_t>>;
+
+class Image
 {
 public:
-    // constructor   -- has no return type
+    // constructor
     Image(const std::uint32_t width, const std::uint32_t height);
 
 
     // destructor
     ~Image();
 
-private: // The goal is to have private implementation details (such as data members) be private.
-         // Only explicitly public API is made available to clients of the class.
-
-    std::uint32_t m_width; // m_ prefix usually used for member variables (good practice)
+private:
+    std::uint32_t m_width;
     std::uint32_t m_height;
-
-
+    GrayscaleMatrix m_matrix; // you cant initialize m_matrix before width or height as it uses both width and height
+    // should always think, in which sequence, the class attributes must be defined
 
 
 };

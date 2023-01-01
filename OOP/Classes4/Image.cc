@@ -2,18 +2,27 @@
 
 #include "Image.h"
 
-Image::Image(const std::uint32_t width, const std::uint32_t height)
-    : m_width(width), m_height(height),
-      m_matrix(m_width, std::vector<std::uint8_t>(m_height, 0))
+
+
+Image::Image(const std::uint32_t width, const std::uint32_t height) : m_width(width),
+m_height(height), m_matrix(m_width,std::vector<std::uint8_t>(m_height,0))
+// initialized m_matrix with 0 everywhere, means image is complete dark
+// you cant initialize m_matrix before width or height as it uses both width and height
+
 {
-    std::cout << "Image object created with shape=(" << width << "," << height
-              << ")!\n";
+
+
+    std::cout << " image object created with shape =( "<<width<<","<<height<<")\n";
+
 }
 
-Image::~Image()
-{
-    std::cout << "Image object destroyed!\n";
+    // destructor
+Image::~Image(){ // we dont need destructor
+    std::cout << " image object destroyed \n";
 }
+
+#include <cstdint>
+#include <cstdio>
 
 void Image::save_image(const char *file_name) const
 {
@@ -77,24 +86,22 @@ void Image::save_image(const char *file_name) const
     img = nullptr;
 }
 
-std::uint32_t Image::get_width() const
+std::uint32_t Image::get_width()const
 {
     return m_width;
 }
-
-std::uint32_t Image::get_height() const
+std::uint32_t Image::get_height()const
 {
     return m_height;
 }
+
 
 GrayscaleMatrix Image::get_matrix() const
 {
     return m_matrix;
 }
 
-void Image::set_pixel(const std::uint32_t x,
-                      const std::uint32_t y,
-                      const std::uint8_t value)
+void Image::set_pixels(std::uint32_t x, std::uint32_t y, std::uint8_t value)
 {
-    m_matrix[x][y] = value;
+    m_matrix[x][y]=value;
 }
