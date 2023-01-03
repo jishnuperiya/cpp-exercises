@@ -35,6 +35,6 @@ these both keywords are used in virtual fnctions and used derived classes.
 
 the overrided method of derived class can be appended with either of these keywords
 
-final - when you know this is going to be last derived class and this method is the last class
+final - you write to the methods that belongs to the class who sit at the lowest inhertance hierarchy
 
 override - when you are unsure if this is the last class and it can be that further derived classes can be derived from the base class
