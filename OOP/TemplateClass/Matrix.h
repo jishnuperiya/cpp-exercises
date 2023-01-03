@@ -26,6 +26,9 @@ class Matrix
     T m_D;
 };
 
+// function defenitions
+
+// when you define function in the scope of class, dont forgot to specify that it is a atemplate class
 template <typename T>
 Matrix<T>::Matrix() : m_A(0.0),m_B(0.0),m_C(0.0),m_D(0.0) // you need to specifically add classname<T>::  , when you use class scope
 {
