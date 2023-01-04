@@ -1,3 +1,5 @@
+#ifndef E26FCAA6_3C9D_41F5_91A9_78A965C5958A
+#define E26FCAA6_3C9D_41F5_91A9_78A965C5958A
 #ifndef B917D7CD_DDDA_4CC9_B53D_A9057EBCA6F2
 #define B917D7CD_DDDA_4CC9_B53D_A9057EBCA6F2
 #ifndef DD24EA2B_BD4A_4FD5_94BD_D199DE79E6DC
@@ -15,6 +17,12 @@ class Matrix
     // IMPORTANT: USE of constant in function: see in main.cc, a const class object is passed. then the function should be
     // defined as const. otherwise compiler will throw error that the function is trying to change the state of the object
     Matrix operator-(const Matrix &rhs)const;
+
+    Matrix operator*(const double &scalar);
+    Matrix operator/(const double &scalar);
+    Matrix operator*=(const double &scalar);
+    Matrix operator/=(const double &scalar);
+
 
     Matrix operator+=(const Matrix &rhs); // function not constant - becuase we are changing the current object (this)
     // but the argument is const. because we are not altering the rhs
@@ -78,10 +86,7 @@ Matrix<T> Matrix<T>::operator-(const Matrix<T> &rhs)const{ // return type is Mat
 
 template <typename T>
 Matrix<T> Matrix<T>::operator+=(const Matrix<T> &rhs){
-    if (this==&rhs){
-        std::cout << "Warninng: RHS IS this!!!!"<<std::endl;
-    return *this;
-    }
+
     this->set_A(this->get_A()+rhs.get_A());
     this->set_B(this->get_B()+rhs.get_B());
     this->set_C(this->get_C()+rhs.get_C());
@@ -93,10 +98,7 @@ Matrix<T> Matrix<T>::operator+=(const Matrix<T> &rhs){
 
 template <typename T>
 Matrix<T> Matrix<T>::operator-=(const Matrix<T> &rhs){
-    if (this==&rhs){
-        std::cout << "Warninng: RHS IS this!!!!"<<std::endl;
-    return *this;
-    }
+
     this->set_A(this->get_A()-rhs.get_A());
     this->set_B(this->get_B()-rhs.get_B());
     this->set_C(this->get_C()-rhs.get_C());
@@ -105,6 +107,57 @@ Matrix<T> Matrix<T>::operator-=(const Matrix<T> &rhs){
     return *this;
 
 }
+
+
+template <typename T>
+Matrix<T> Matrix<T>::operator*(const double &scalar)
+{
+    auto newMatrix= Matrix{};
+    newMatrix.set_A(this->get_A()*scalar);
+    newMatrix.set_B(this->get_B()*scalar);
+    newMatrix.set_C(this->get_C()*scalar);
+    newMatrix.set_D(this->get_D()*scalar);
+
+    return newMatrix;
+}
+
+
+template <typename T>
+Matrix<T> Matrix<T>::operator/(const double &scalar)
+{
+    auto newMatrix= Matrix{};
+    newMatrix.set_A(this->get_A()/scalar);
+    newMatrix.set_B(this->get_B()/scalar);
+    newMatrix.set_C(this->get_C()/scalar);
+    newMatrix.set_D(this->get_D()/scalar);
+
+    return newMatrix;
+}
+
+template <typename T>
+Matrix<T> Matrix<T>::operator*=(const double &scalar)
+{
+    this->set_A(this->get_A()*scalar);
+    this->set_B(this->get_B()*scalar);
+    this->set_C(this->get_C()*scalar);
+    this->set_D(this->get_D()*scalar);
+
+    return *this;
+}
+
+
+template <typename T>
+Matrix<T> Matrix<T>::operator/=(const double &scalar)
+{
+    this->set_A(this->get_A()/scalar);
+    this->set_B(this->get_B()/scalar);
+    this->set_C(this->get_C()/scalar);
+    this->set_D(this->get_D()/scalar);
+
+    return *this;
+}
+
+
 template <typename T>
 void Matrix<T>::print_matrix()const
 {
@@ -142,3 +195,6 @@ void Matrix<T>::set_D(const T &new_D){m_D=new_D;}
 
 
 #endif /* B917D7CD_DDDA_4CC9_B53D_A9057EBCA6F2 */
+
+
+#endif /* E26FCAA6_3C9D_41F5_91A9_78A965C5958A */
