@@ -1,19 +1,33 @@
 # synatx:
 
 classes1
+
 classes2
+
 classes3
+
 classes4
+
 _ Exercise
+
 Inhertiance
+
 polymorphism
+
 virutal destructor
+
 keywords
+
 interface
+
 Static
+
 UML Diagram
+
 Project_Matrix class
+
 template class
+
 operator overloading
 
 
