@@ -89,6 +89,20 @@ int main()
     std::string firstname="jisnu";
     std::string lastname ="periya";
     std::string name = firstname+lastname;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //firstname,lastname,name - lvalues
     // "jisnu","periya",firstname+lastname - rvalues
 
