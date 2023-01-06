@@ -19,7 +19,9 @@ public:
     }
 
 
-protected:
+protected: // so that the kid classes has access to these members. if it was private, the inherited classes cant access these members
+//member variables has to be either private or protected. if inherited classes need access to member variable, the give protected, otherwise
+// specify private
     const std::string m_name; // every player and npc has name and id
     const std::uint32_t m_id;
 
@@ -35,6 +37,10 @@ public:
     ~Player()
     {
         std::cout << "Player destructor! \n";
+    }
+
+    void print_id(){
+        std::cout << m_id << std::endl;
     }
 };
 

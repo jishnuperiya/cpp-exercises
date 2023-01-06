@@ -12,16 +12,14 @@ int main()
 
     {
         Agent agent1("A1",2U);
-
     }
     {
         Player player1("A2",2);
+        player1.print_id();
     }
     {
         auto npc1 = NPC{"A3",2}; // different way to initialize object
     }
-
-
 
     return 0;
 }
