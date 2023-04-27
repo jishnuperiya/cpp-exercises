@@ -19,7 +19,13 @@ public:
     Matrix(std::size_t rows, std::size_t cols, const T &value);
 
     // Exercise 1: Copy Constructor
+    Matrix(const Matrix &other);
     // Exercise 2: Copy Assignment Operator
+    Matrix &operator=(const Matrix &other); // recap: assignment operator always returns reference variable
+
+    /* note: it was said before that we need copy constructor or copy assignment operator only when we have
+     memory mangament in our class. but we just do it here just to learn the implementation.
+    */
 
     Matrix operator+(const Matrix &rhs);
     Matrix &operator+=(const Matrix &rhs);
@@ -56,9 +62,22 @@ Matrix<T>::Matrix(std::size_t rows, std::size_t cols, const T &value)
 }
 
 // Copy Constructor
-
+template <typename T>
+Matrix<T>::Matrix(const Matrix &other)
+    :m_rows(other.m_rows),m_cols(other.m_cols),m_data(other.m_data)
+{
+}
 
 // Copy Assignment Operator
+template <typename T>
+Matrix<T>& Matrix<T>::operator=(const Matrix &other)
+{
+    m_rows = other.m_rows;
+    m_cols = other.m_cols;
+    m_data = other.m_data;
+
+    return *this;
+}
 
 
 template <typename T>
