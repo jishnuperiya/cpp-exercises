@@ -1,5 +1,4 @@
-#ifndef AC64CF5B_6D4A_4DDE_8653_697523330909
-#define AC64CF5B_6D4A_4DDE_8653_697523330909
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -21,7 +20,8 @@ public:
         std::cout << "Agent Destructor!" << '\n';
     }
 
-    virtual void print_agent_data() const
+
+    void print_agent_data() const
     {
         std::cout << "Agent hp: " << m_hp << ", energy: " << m_energy << '\n';
     }
@@ -29,8 +29,8 @@ public:
 protected:
     const std::string m_name;
     const std::uint32_t m_id;
-    std::uint32_t m_hp = 0U;
-    std::uint32_t m_energy = 0U;
+    std::uint32_t m_hp = 0U; // lebenspunkt
+    std::uint32_t m_energy = 0U; // energy
 };
 
 class Player : public Agent
@@ -50,10 +50,11 @@ public:
         std::cout << "Player Destructor!" << '\n';
     }
 
-    void print_agent_data() const override
+    void print_agent_data()
     {
         std::cout << "Player hp: " << m_hp << ", energy: " << m_energy << '\n';
     }
+
 };
 
 class NPC : public Agent
@@ -73,11 +74,9 @@ public:
         std::cout << "NPC Destructor!" << '\n';
     }
 
-    void print_agent_data() const override
+    void print_agent_data()
     {
         std::cout << "NPC hp: " << m_hp << ", energy: " << m_energy << '\n';
     }
+
 };
-
-
-#endif /* AC64CF5B_6D4A_4DDE_8653_697523330909 */
