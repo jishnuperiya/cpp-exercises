@@ -38,3 +38,4 @@ print a
 etc..
 
 watch : https://www.youtube.com/watch?v=u6iXfpBDU3w
+watch 2: https://www.youtube.com/watch?v=YzIBwqWC6EM

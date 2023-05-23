@@ -19,6 +19,21 @@ public:
     Matrix(std::size_t rows, std::size_t cols, const T &value);
     ~Matrix() noexcept = default;
 
+    /* NOTE . when we have member variables in which are move and copy operations are
+    already implemented under the hood like int, float, std::vector, std::array,
+    we dont have to write seperate move and copy constructors
+    */
+
+   /*writing default to move and copy constructor when we dont need to
+   explicityl write them, make the core more readable than just avoiding them. both are
+   okay code will work in either case, but here better readability wins*/
+
+    /*KEYWORD NOEXCEPT:
+    means the call of these functions can not throw any exceptions.
+    exceptions will come in next chapters.
+    for now just remember:
+    IMP: the move constructor and move operator and destructor cannot throw any exceptions
+    */
     Matrix(const Matrix &other) = default;
     Matrix &operator=(const Matrix &other) = default;
     Matrix(Matrix &&other) noexcept = default;
@@ -41,6 +56,12 @@ public:
     std::size_t num_cols() const;
 
 private:
+
+/* NOTE . when we have member variables in which are move and copy operations are
+already implemented under the hood like int, float, std::vector, std::array,
+we dont have to write seperate move and copy constructors
+*/
+
     std::size_t m_rows;
     std::size_t m_cols;
     MatrixDataType m_data;
