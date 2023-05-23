@@ -2,12 +2,8 @@
 #include <iostream>
 
 /*
-just using constexpr to define a global varialbe wich known during compile time is halfcorrect.
-the correct use is to use a static keyword - allocating 4 bytes of memeory for the variable 
-in the static memeory area.
-
 And if you have this static variable in a source code (not header file), this variable is visible
-only in the scope of this file. can not be used outside of this file. 
+only in the scope of this file. can not be used outside of this file.
 Means the varible can only be used in the compilation unit
 wher it has been defined.
 
@@ -16,8 +12,6 @@ you can also have a static variable inside a function. which is given below as a
 constexpr static std::uint32_t NUM_PLAYERS2 = 2U;
 
 
-// SUMMARY: for global variables, constexpr is not enough . you need constexpr STATIC!
-
 
 void f()
 {
@@ -25,7 +19,7 @@ void f()
     // if you want the variable to persist use 'static'
 
     static std::uint32_t counter = 0; // it wont be defined in every function call. but during compilation the memory required
-    // for this varialble is allocated during the compile time itself   
+    // for this varialble is allocated during the compile time itself
 
     /*
     you can also define static std::uint32_t counter = 0 , outside the function. but not constexpr (because counter is not a fixed value variable. it increments right?)
