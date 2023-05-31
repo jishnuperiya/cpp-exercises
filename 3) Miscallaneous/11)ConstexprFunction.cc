@@ -25,8 +25,6 @@ int main()
     constexpr std::uint32_t n = 5;
     constexpr std::uint32_t result = faculty(n); // compiler calcualte the result during compile time itself! saves few ms of runtime.
     // the input to the function shjould also known in compilee time. therefore define the variable as constexpr
-
     std::cout << result << std::endl;
-
     return 0;
 }
