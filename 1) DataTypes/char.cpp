@@ -14,4 +14,6 @@ int main(){
     std::cout <<" ascii value corresponding to the letter variable name2 is:"<< (int)name2 <<std::endl;
 
 
-}   
+}
+
+
