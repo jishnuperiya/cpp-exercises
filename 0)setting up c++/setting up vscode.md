@@ -33,3 +33,8 @@ c++ extension may switch into intellicode in future
 
 
 Intellisense will work out of the box. Intellisense will create a default c++ configuration based on what it is detected in your system but lot of c++ developer targets different platforms. so developer can change the configurtaions to be the platform that they need. or you can have one configuration that uses clang and one that uses gcc.
+
+
+
+task.json - how you build the program
+launch.json - how you debug the program
