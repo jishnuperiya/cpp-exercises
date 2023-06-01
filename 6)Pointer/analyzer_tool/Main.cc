@@ -1,6 +1,6 @@
 #include <cstdint>
-#include <iostream>
 
+#include <iostream>
 int main()
 {
     const auto length = std::size_t{4};

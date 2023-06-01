@@ -3,7 +3,7 @@
 int main()
 {
     // Heap allocation
-    int *p = new int;  // the variable p is in the stack, but pointing to an int variable in heap. 
+    int *p = new int;  // the variable p is in the stack, but pointing to an int variable in heap.
     *p = 4;
 
     std::cout << "Memory address of p: " << &p << std::endl;                     // 0xc38
