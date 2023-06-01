@@ -1,41 +1,10 @@
-## Chapters
+# C++ Übungen: Moderne und Effektive C++ Programmierung
 
-1) DataTypes
-2) Compiler commands
-3) Miscallaneous
-4) ComputerGame3
-5) arrays
-6) Pointer
-7) Reference
-8) ComputerGame4
-9) Enum_Struct_Namespace
-10) Computer Game 5 (inside computer game 4)
-11) dynamic array project
-12) Vector
-13) computer game 6
-14) computer game 7
-15) OOP
-16) dynamic array project OOPS
+Dies ist der Code zu meinem Udemy Kurs:
+*C++ Übungen:  Moderne und Effektive C++ Programmierung* von Jan Schaffranek.
 
+## Rabatt-Code
 
+Im Folgenden habe ich einen Link zum aktuellen Rabatt Code hinterlegt. Den Code könnt ihr auch an eure Freunde schicken, damit sie sich einen meiner Kurse kaufen können. Bei einem Kauf über meine Rabattcodes erhalte ich 95% der Einnahmen und somit könnt Ihr mich besser unterstützen.
 
-
-compiling a program
-----------------------
-
-g++ -o main.exe main.cc lib.cc lib.h
-
-
-Debugging a program
----------------------
-g++ -o main.exe main.cc lib.cc lib.h -g
-gdb main
-
-break 10
-run
-step
-print a
-etc..
-
-watch : https://www.youtube.com/watch?v=u6iXfpBDU3w
-watch 2: https://www.youtube.com/watch?v=YzIBwqWC6EM
+Link zu der Liste der Rabatt Codes: [Link](https://github.com/franneck94/YoutubeVideos/blob/master/README.md)
